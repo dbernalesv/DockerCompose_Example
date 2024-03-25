@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  my_app_container:
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo_container
+  mongo_container:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=jose 
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
