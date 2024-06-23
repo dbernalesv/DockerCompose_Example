@@ -7,7 +7,7 @@ from flask_pymongo import PyMongo
 app = Flask(__name__)
 
 # Configuración de la base de datos: establecer la URI de conexión con MongoDB
-app.config["MONGO_URI"] = "mongodb://jose:password@localhost:27017/miapp?authSource=admin"
+app.config["MONGO_URI"] = "mongodb://diego:password@localhost:27017/miapp?authSource=admin"
 # Inicializar PyMongo con la configuración actual de la aplicación Flask
 mongo = PyMongo(app)
 
